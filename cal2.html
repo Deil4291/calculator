@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <button onclick="location.href = 'index.html'">HOME</button>
+    <button onclick="location.href = 'cal2.html'">ResTarT</button>
+    <br><br>
+
+    <script>
+        function cal(num1, num2, ope) {
+            if(ope === "+"){
+                document.write(Number(num1) + Number(num2));
+            }else if(ope === "-") {
+                document.write(Number(num1) - Number(num2));
+            }else if(ope === "*") {
+                document.write(Number(num1) * Number(num2));
+            }else if(ope === "/") {
+                document.write(Number(num1) / Number(num2));
+            }else if(ope === "%") {
+                document.write(Number(num1) % Number(num2));
+            }else if(ope === "**") {
+                document.write(Number(num1) ** Number(num2));
+            }
+        }
+
+    let num1 = prompt("num1을 적어주세요.");  
+    let n1 = isNaN(num1);
+    if(n1){
+        document.write("com: 숫자를 올바를게 적어주세요!!");
+        event.preventDefault()
+    }
+    let num2 = prompt("num2을 적어주세요.");  
+    let n2 = isNaN(num2);
+    if(n2){
+        document.write("com: 숫자를 올바를게 적어주세요!!");
+        event.preventDefault()
+    }
+    let ope = prompt("operator를 적어주세요.");
+    if(ope !== "+" && ope !== "-" && ope !== "*" && ope !== "/" && ope !== "%" && ope !== "**"){
+        document.write("com: 연산자를 올바를게 적어주세요!!");
+        event.preventDefault()
+    }
+
+    cal(num1, num2, ope);
+
+    
+    
+    </script>
+
+
+    
+</body>
+</html>
